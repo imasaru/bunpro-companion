@@ -3,10 +3,10 @@ function WkUserData(){
   this.userPublicKey = "";
   this.refreshInterval = 900000;
   this.notifLifetime = 10000;
-  this.inAppNavigation = true;
+  this.inAppNavigation = false;
   this.expandInfoPanel = true;
   this.hide0Badge = false;
-  this.notifSound = false;
+  this.notifSound = true;
 
   this.username = "Mysterious Unknown";
   this.gravatar = "";
