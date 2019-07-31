@@ -1,4 +1,8 @@
-## WaniKani Companion
+<div>
+  <p align="center"><img src="img/wanikani/icon.png"/>
+  <h1 align="center">WaniKani Companion</h1>
+  <h3 align="center">An extension that integrates your <a href="https://www.wanikani.com">WaniKani</a> environment into your Chrome browser.</h3>
+</div>
 
 [![Chrome Web Store URL](https://img.shields.io/chrome-web-store/v/plfjbbakjphlkdpcdpodaedhicoaloph.svg?style=flat-square)](https://chrome.google.com/webstore/detail/wanikani-companion/plfjbbakjphlkdpcdpodaedhicoaloph)
 [![License](https://img.shields.io/github/license/naei/wanikani-companion.svg?style=flat-square)](LICENSE)
