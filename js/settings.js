@@ -13,7 +13,7 @@ window.onload = function() {
 
   // action when LINK to WaniKani is clicked
   document.getElementById('link').onclick = function() {
-    window.open('https://www.wanikani.com/settings/account#public-api-key')
+    window.open('https://www.wanikani.com/settings/personal_access_tokens#public-api-key')
   }
 
   // action when settings are saved
