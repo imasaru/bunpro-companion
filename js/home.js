@@ -14,7 +14,12 @@ window.onload = function() {
     });
   }
 
-  // display Gravatar image (if exist)
+    // action when username is clicked
+    document.getElementById('h.username').onclick = function() {
+        window.open('https://www.wanikani.com/users/' + wkUserData.username)
+    }
+
+    // display Gravatar image (if exist)
   var xhr = new XMLHttpRequest();
   xhr.open("GET", 'http://www.gravatar.com/avatar/' + wkUserData.gravatar + '?d=404', true);
   xhr.onreadystatechange = function() {
@@ -25,6 +30,11 @@ window.onload = function() {
     }
   }
   xhr.send();
+
+    // action when level is clicked
+    document.getElementById('h.level').onclick = function() {
+        window.open('https://www.wanikani.com/level/' + wkUserData.level)
+    }
 
   // when the user click on a link, it redirect the url to the web-container page or a new Chrome tab (depends on user settings)
   var inApp = wkUserData.inAppNavigation;
