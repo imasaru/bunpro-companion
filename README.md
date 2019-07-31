@@ -4,12 +4,12 @@
   <h3 align="center">An extension that integrates your <a href="https://www.wanikani.com">WaniKani</a> environment into your Chrome browser.</h3>
 </div>
 
-[![Chrome Web Store URL](https://img.shields.io/chrome-web-store/v/plfjbbakjphlkdpcdpodaedhicoaloph.svg?style=flat-square)](https://chrome.google.com/webstore/detail/wanikani-companion/plfjbbakjphlkdpcdpodaedhicoaloph)
-[![License](https://img.shields.io/github/license/naei/wanikani-companion.svg?style=flat-square)](LICENSE)
+<p align="center">
+<a href="https://chrome.google.com/webstore/detail/wanikani-companion/plfjbbakjphlkdpcdpodaedhicoaloph"><img title="Chrome Web Store URL" src="https://img.shields.io/chrome-web-store/v/plfjbbakjphlkdpcdpodaedhicoaloph.svg?style=flat-square" /></a>
+<a href="LICENSE"><img title="License" src="https://img.shields.io/github/license/naei/wanikani-companion.svg?style=flat-square" /></a>
+</p>
 
-WaniKani Companion is an extension that integrates your WaniKani environment into your Chrome browser.
-
-![WaniKani Companion](https://lh6.googleusercontent.com/XPRgWP5wxDrRvQgA_tL2vI4QBTnyegM5tcAvzZaEzPuYb57-2-BtqTFyhoY0u8PUjpa5HTcLxA=s640-h400-e365-rw)
+<p align="center"><img src="https://lh6.googleusercontent.com/XPRgWP5wxDrRvQgA_tL2vI4QBTnyegM5tcAvzZaEzPuYb57-2-BtqTFyhoY0u8PUjpa5HTcLxA=s640-h400-e365-rw" /></p>
 
 ## Features
 
