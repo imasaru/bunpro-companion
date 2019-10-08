@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "WaniKani Companion",
+  "name": "Bunpro Companion",
   "version": "1.2.4.3",
   "description": "Your favorite Japanese learning app at a click away.",
   "browser_action": {
-    "default_title": "WaniKani Companion",
+    "default_title": "Bunpro Companion",
     "default_icon": "/img/wanikani/icon.png",
     "default_popup": "/html/home.html"
   },

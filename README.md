@@ -1,7 +1,7 @@
 <div>
   <p align="center"><img src="img/wanikani/icon.png"/>
-  <h1 align="center">WaniKani Companion</h1>
-  <h3 align="center">An extension that integrates your <a href="https://www.wanikani.com">WaniKani</a> environment into your Chrome browser.</h3>
+  <h1 align="center">Bunpro Companion</h1>
+  <h3 align="center">An extension that integrates your <a href="https://www.wanikani.com">Bunpro</a> environment into your Chrome browser.</h3>
 </div>
 
 <p align="center">
@@ -17,12 +17,12 @@
 * Badge notifications: be notified of your available lessons and reviews on the extension's icon.
 * Desktop notifications: be notified of your lessons and reviews directly on your desktop.
 * Chrome sync integration: the user settings are saved across all your Chrome's instances.
-* WaniKani website integration: display all of WaniKani directly from the extension tab (dashboard, lessons, reviews...).
-* User scripts improvements (extension + standalone HTTPS WaniKani website): the "item info" panel is auto-expanded on reviews et lessons quizzes.
+* Bunpro website integration: display all of Bunpro directly from the extension tab (dashboard, lessons, reviews...).
+* User scripts improvements (extension + standalone HTTPS Bunpro website): the "item info" panel is auto-expanded on reviews et lessons quizzes.
 
 ## Installation
 
-If you just want to use the latest version of WaniKani Companion on your Chrome browser, you can directly install the extension from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/wanikani-companion/plfjbbakjphlkdpcdpodaedhicoaloph).
+If you just want to use the latest version of Bunpro Companion on your Chrome browser, you can directly install the extension from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/wanikani-companion/plfjbbakjphlkdpcdpodaedhicoaloph).
 
 Otherwise, if you want to load the extension from the source code:
 
@@ -32,12 +32,12 @@ Otherwise, if you want to load the extension from the source code:
  4. Navigate to the directory in which your extension files live, and select it.
  5. Have fun!
 
-For more details about Chrome extensions, WaniKani and development for WaniKani, I suggest you to check:
+For more details about Chrome extensions, Bunpro and development for Bunpro, I suggest you to check:
 
 - the [official documentation](https://developer.chrome.com/extensions) for Chrome extensions,
-- the WaniKani [website](https://www.wanikani.com) and [API documentation](https://www.wanikani.com/api).
+- the Bunpro [website](https://www.wanikani.com) and [API documentation](https://www.wanikani.com/api).
 
-/!\ This app integrates a frame of the official HTTPS WaniKani website (https://www.wanikani.com); using another WaniKani extension at the same time may affect your experience.
+/!\ This app integrates a frame of the official HTTPS Bunpro website (https://www.wanikani.com); using another Bunpro extension at the same time may affect your experience.
 
 ## Notice
 
@@ -45,7 +45,7 @@ Copyright (c) 2015 Lucas Pantanella
 
 The sources are released under the terms of the [MIT license](LICENSE).
 
-WaniKani Companion is an unofficial project.
+Bunpro Companion is an unofficial project.
 All the artistic content located in the 'img/wanikani' folder and https://www.wanikani.com are the property of Tofugu LLC.
 
-Thanks to WaniKani staff for their amazing work!
+Thanks to Bunpro staff for their amazing work!

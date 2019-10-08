@@ -11,7 +11,7 @@ window.onload = function() {
   document.getElementById('expandInfoPanel').checked = bpUserData.expandInfoPanel == true ? true : false;
   document.getElementById('hide0Badge').checked = bpUserData.hide0Badge == true ? true : false;
 
-  // action when LINK to WaniKani is clicked
+  // action when LINK to Bunpro is clicked
   document.getElementById('link').onclick = function() {
     window.open('https://www.wanikani.com/settings/personal_access_tokens#public-api-key')
   }

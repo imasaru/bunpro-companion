@@ -36,7 +36,7 @@ function getBpUserData(){
   return JSON.parse(localStorage.bpUserData);
 }
 
-// get the user data via the WaniKani API
+// get the user data via the Bunpro API
 function getApiData(publicKey, type, callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "https://bunpro.jp/api/user/" + publicKey + "/" + type, true);
@@ -59,7 +59,7 @@ function parseRemainingTime(reviewDate) {
   return null;
 }
 
-// update the local user data from the JSON data returned from the WaniKani API
+// update the local user data from the JSON data returned from the Bunpro API
 function updateBpUserData(jsonUserData, type, callback){
 
   var bpUserData = JSON.parse(localStorage.bpUserData);
@@ -87,7 +87,7 @@ function updateBpUserData(jsonUserData, type, callback){
   if (callback) callback();
 }
 
-// request the data to Wanikani API, display notifications and save local data
+// request the data to Bunpro API, display notifications and save local data
 function requestUserData(notify, callback) {
 
   var currentData = getBpUserData();
@@ -141,7 +141,7 @@ function requestUserData(notify, callback) {
       } else {
         chrome.browserAction.setBadgeText({text:total.toString()});
       }
-      chrome.browserAction.setTitle({title: "WaniKani Companion\n" + "Lesson(s): " + nbLessons + "\n" + "Review(s): " + nbReviews});
+      chrome.browserAction.setTitle({title: "Bunpro Companion\n" + "Lesson(s): " + nbLessons + "\n" + "Review(s): " + nbReviews});
       // save study data
       updateBpUserData(userData, "study-queue", function(){
         // get the srs distribution data
@@ -158,7 +158,7 @@ function requestUserData(notify, callback) {
 // create a HTML notification
 function createNotification(body, url, tag){
 
-  var notification = new Notification('WaniKani Companion', {
+  var notification = new Notification('Bunpro Companion', {
     icon: '/img/wanikani/icon.png',
     body: body,
     tag: tag
