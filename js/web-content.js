@@ -1,8 +1,8 @@
 window.onload = function() {
 
-  chrome.storage.sync.get("wkUserData", function (obj) {
+  chrome.storage.sync.get("bpUserData", function (obj) {
     // review & lessons quiz: auto-expand the "item info" panel
-    if (obj.wkUserData.expandInfoPanel === true){
+    if (obj.bpUserData.expandInfoPanel === true){
       if (document.getElementById('reviews') != null || document.getElementById('lessons') != null) {
         var observer = new WebKitMutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {

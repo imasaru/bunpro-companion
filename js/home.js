@@ -1,31 +1,31 @@
 window.onload = function() {
 
-  var wkUserData = JSON.parse(localStorage.wkUserData);
+  var bpUserData = JSON.parse(localStorage.bpUserData);
   fullfillUserData();
 
   // display info message if the user is coming for the first time
-  if (wkUserData.userPublicKey === undefined || wkUserData.userPublicKey == ""){
+  if (bpUserData.userPublicKey === undefined || bpUserData.userPublicKey == ""){
     document.querySelector(".info").style.display = 'inline';
   } else {
      // reload user data
     requestUserData(false, function() {
-      wkUserData = JSON.parse(localStorage.wkUserData);
+      bpUserData = JSON.parse(localStorage.bpUserData);
       fullfillUserData();
     });
   }
 
     // action when username is clicked
     document.getElementById('h.username').onclick = function() {
-        window.open('https://www.wanikani.com/users/' + wkUserData.username)
+        window.open('https://www.wanikani.com/users/' + bpUserData.username)
     }
 
     // display Gravatar image (if exist)
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", 'http://www.gravatar.com/avatar/' + wkUserData.gravatar + '?d=404', true);
+  xhr.open("GET", 'http://www.gravatar.com/avatar/' + bpUserData.gravatar + '?d=404', true);
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
-        document.getElementById('gravatar').src = 'http://www.gravatar.com/avatar/' + wkUserData.gravatar;
+        document.getElementById('gravatar').src = 'http://www.gravatar.com/avatar/' + bpUserData.gravatar;
       }
     }
   }
@@ -33,11 +33,11 @@ window.onload = function() {
 
     // action when level is clicked
     document.getElementById('h.level').onclick = function() {
-        window.open('https://www.wanikani.com/level/' + wkUserData.level)
+        window.open('https://www.wanikani.com/level/' + bpUserData.level)
     }
 
   // when the user click on a link, it redirect the url to the web-container page or a new Chrome tab (depends on user settings)
-  var inApp = wkUserData.inAppNavigation;
+  var inApp = bpUserData.inAppNavigation;
   document.getElementById('toLessons').onclick = function() {
     var url = "https://www.wanikani.com/lesson/session"
     if (inApp){
@@ -66,19 +66,19 @@ window.onload = function() {
   // fullfill user data
   function fullfillUserData(){
 
-     document.getElementById('username').innerHTML = wkUserData.username;
-     document.getElementById('level').innerHTML = wkUserData.level;
-     document.getElementById('title').innerHTML = wkUserData.title;
-     document.getElementById('nbLessons').innerHTML = wkUserData.nbLessons;
-     document.getElementById('nbReviews').innerHTML = wkUserData.nbReviews;
-     document.getElementById('reviewTime').innerHTML = wkUserData.nextReview;
-     document.getElementById('srsNbApprentice').innerHTML = wkUserData.srsNbApprentice;
-     document.getElementById('srsNbGuru').innerHTML = wkUserData.srsNbGuru;
-     document.getElementById('srsNbMaster').innerHTML = wkUserData.srsNbMaster;
-     document.getElementById('srsNbEnlighten').innerHTML = wkUserData.srsNbEnlighten;
-     document.getElementById('srsNbBurned').innerHTML = wkUserData.srsNbBurned;
+     document.getElementById('username').innerHTML = bpUserData.username;
+     document.getElementById('level').innerHTML = bpUserData.level;
+     document.getElementById('title').innerHTML = bpUserData.title;
+     document.getElementById('nbLessons').innerHTML = bpUserData.nbLessons;
+     document.getElementById('nbReviews').innerHTML = bpUserData.nbReviews;
+     document.getElementById('reviewTime').innerHTML = bpUserData.nextReview;
+     document.getElementById('srsNbApprentice').innerHTML = bpUserData.srsNbApprentice;
+     document.getElementById('srsNbGuru').innerHTML = bpUserData.srsNbGuru;
+     document.getElementById('srsNbMaster').innerHTML = bpUserData.srsNbMaster;
+     document.getElementById('srsNbEnlighten').innerHTML = bpUserData.srsNbEnlighten;
+     document.getElementById('srsNbBurned').innerHTML = bpUserData.srsNbBurned;
 
-     if (wkUserData.nbReviews > 0 || !wkUserData.nextReview){
+     if (bpUserData.nbReviews > 0 || !bpUserData.nextReview){
          // the user has reviews, or does not have next reviews
          document.querySelector("#reviews").style.display = 'block';
          document.querySelector("#nextReviews").style.display = 'none';

@@ -6,32 +6,32 @@ window.onload = function() {
   chrome.browserAction.setBadgeBackgroundColor({color:'#ff00aa'}); 
 
   // check that there is a Chrome sync value
-  chrome.storage.sync.get("wkUserData", function (obj) {
-    if (obj.wkUserData === undefined){
-      if (localStorage.wkUserData === undefined){
+  chrome.storage.sync.get("bpUserData", function (obj) {
+    if (obj.bpUserData === undefined){
+      if (localStorage.bpUserData === undefined){
           // if a local storage does not exist, initialize it
-          setWkUserData(new WkUserData());
+          setBpUserData(new BpUserData());
       }
     } else {
       // get the existing user data from Chrome sync
-      localStorage.wkUserData = JSON.stringify(obj.wkUserData);
+      localStorage.bpUserData = JSON.stringify(obj.bpUserData);
     }
     loopRequestUserData();
   });
   
   // update data every x milliseconds
   function loopRequestUserData(){
-    var wkUserData = JSON.parse(localStorage.wkUserData);
+    var bpUserData = JSON.parse(localStorage.bpUserData);
     requestUserData(true, function(){
-      loopRequestId = window.setTimeout(loopRequestUserData, wkUserData.refreshInterval, true, true);
+      loopRequestId = window.setTimeout(loopRequestUserData, bpUserData.refreshInterval, true, true);
     });
   }
 
   // when the update interval is changed, restart loopRequestUserData with the updated interval
   chrome.storage.onChanged.addListener(function(changes, namespace) {
-    if ('wkUserData' in changes && loopRequestId !== undefined) {
-      var oldValues = changes.wkUserData.oldValue;
-      var newValues = changes.wkUserData.newValue;
+    if ('bpUserData' in changes && loopRequestId !== undefined) {
+      var oldValues = changes.bpUserData.oldValue;
+      var newValues = changes.bpUserData.newValue;
       if (newValues.refreshInterval != oldValues.refreshInterval) {
         window.clearTimeout(loopRequestId);
         loopRequestId = loopRequestUserData();

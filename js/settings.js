@@ -1,15 +1,15 @@
 window.onload = function() {
 
-  var wkUserData = getWkUserData();
+  var bpUserData = getBpUserData();
 
   // display current settings
-  document.getElementById('apiKey').value = wkUserData.userPublicKey;
-  document.getElementById('refreshInterval').value = wkUserData.refreshInterval;
-  document.getElementById('notifLifetime').value = wkUserData.notifLifetime;
-  document.getElementById('notifSound').checked = wkUserData.notifSound == true ? true : false;
-  document.getElementById('inAppNav').checked = wkUserData.inAppNavigation == true ? true : false;
-  document.getElementById('expandInfoPanel').checked = wkUserData.expandInfoPanel == true ? true : false;
-  document.getElementById('hide0Badge').checked = wkUserData.hide0Badge == true ? true : false;
+  document.getElementById('apiKey').value = bpUserData.userPublicKey;
+  document.getElementById('refreshInterval').value = bpUserData.refreshInterval;
+  document.getElementById('notifLifetime').value = bpUserData.notifLifetime;
+  document.getElementById('notifSound').checked = bpUserData.notifSound == true ? true : false;
+  document.getElementById('inAppNav').checked = bpUserData.inAppNavigation == true ? true : false;
+  document.getElementById('expandInfoPanel').checked = bpUserData.expandInfoPanel == true ? true : false;
+  document.getElementById('hide0Badge').checked = bpUserData.hide0Badge == true ? true : false;
 
   // action when LINK to WaniKani is clicked
   document.getElementById('link').onclick = function() {
@@ -25,21 +25,21 @@ window.onload = function() {
     var key = document.getElementById('apiKey').value;
 
     // the key is empty or didn't change: do not save
-    if (key == "" || key == wkUserData.userPublicKey) {
+    if (key == "" || key == bpUserData.userPublicKey) {
 
-      wkUserData.refreshInterval = document.getElementById('refreshInterval').value;
-      wkUserData.notifLifetime = document.getElementById('notifLifetime').value;
-      wkUserData.notifSound = (document.getElementById('notifSound').checked) ? true : false;
-      wkUserData.inAppNavigation = (document.getElementById('inAppNav').checked) ? true : false;
-      wkUserData.expandInfoPanel = (document.getElementById('expandInfoPanel').checked) ? true : false;
-      wkUserData.hide0Badge = (document.getElementById('hide0Badge').checked) ? true : false;
+      bpUserData.refreshInterval = document.getElementById('refreshInterval').value;
+      bpUserData.notifLifetime = document.getElementById('notifLifetime').value;
+      bpUserData.notifSound = (document.getElementById('notifSound').checked) ? true : false;
+      bpUserData.inAppNavigation = (document.getElementById('inAppNav').checked) ? true : false;
+      bpUserData.expandInfoPanel = (document.getElementById('expandInfoPanel').checked) ? true : false;
+      bpUserData.hide0Badge = (document.getElementById('hide0Badge').checked) ? true : false;
 
-      setWkUserData(wkUserData, function() {
+      setBpUserData(bpUserData, function() {
         window.location.replace("/html/home.html");
       });
 
     // a new key has been entered: save
-    } else if (key != wkUserData.userPublicKey){
+    } else if (key != bpUserData.userPublicKey){
 
       getApiData(key, "user-information", function(obj){
 
@@ -50,15 +50,15 @@ window.onload = function() {
 
         // the key is valid
         } else {
-          wkUserData.userPublicKey = document.getElementById('apiKey').value;
-          wkUserData.refreshInterval = document.getElementById('refreshInterval').value;
-          wkUserData.notifLifetime = document.getElementById('notifLifetime').value;
-          wkUserData.notifSound = (document.getElementById('notifSound').checked) ? true : false;
-          wkUserData.inAppNavigation = (document.getElementById('inAppNav').checked) ? true : false;
-          wkUserData.expandInfoPanel = (document.getElementById('expandInfoPanel').checked) ? true : false;
-          wkUserData.hide0Badge = (document.getElementById('hide0Badge').checked) ? true : false;
+          bpUserData.userPublicKey = document.getElementById('apiKey').value;
+          bpUserData.refreshInterval = document.getElementById('refreshInterval').value;
+          bpUserData.notifLifetime = document.getElementById('notifLifetime').value;
+          bpUserData.notifSound = (document.getElementById('notifSound').checked) ? true : false;
+          bpUserData.inAppNavigation = (document.getElementById('inAppNav').checked) ? true : false;
+          bpUserData.expandInfoPanel = (document.getElementById('expandInfoPanel').checked) ? true : false;
+          bpUserData.hide0Badge = (document.getElementById('hide0Badge').checked) ? true : false;
 
-          setWkUserData(wkUserData, function() {
+          setBpUserData(bpUserData, function() {
             requestUserData(false, function(){
               window.location.replace("/html/home.html");
             });
