@@ -1,7 +1,7 @@
 <div>
-  <p align="center"><img src="img/wanikani/icon.png"/>
+  <p align="center"><img src="img/bunpro/icon.png"/>
   <h1 align="center">Bunpro Companion</h1>
-  <h3 align="center">An extension that integrates your <a href="https://www.wanikani.com">Bunpro</a> environment into your Chrome browser.</h3>
+  <h3 align="center">An extension that integrates your <a href="https://bunpro.jp">Bunpro</a> environment into your Chrome browser.</h3>
 </div>
 
 <p align="center">
@@ -35,9 +35,9 @@ Otherwise, if you want to load the extension from the source code:
 For more details about Chrome extensions, Bunpro and development for Bunpro, I suggest you to check:
 
 - the [official documentation](https://developer.chrome.com/extensions) for Chrome extensions,
-- the Bunpro [website](https://www.wanikani.com) and [API documentation](https://www.wanikani.com/api).
+- the Bunpro [website](https://bunpro.jp) and [API documentation](https://bunpro.jp/api).
 
-/!\ This app integrates a frame of the official HTTPS Bunpro website (https://www.wanikani.com); using another Bunpro extension at the same time may affect your experience.
+/!\ This app integrates a frame of the official HTTPS Bunpro website (https://bunpro.jp); using another Bunpro extension at the same time may affect your experience.
 
 ## Notice
 
@@ -46,6 +46,6 @@ Copyright (c) 2015 Lucas Pantanella
 The sources are released under the terms of the [MIT license](LICENSE).
 
 Bunpro Companion is an unofficial project.
-All the artistic content located in the 'img/wanikani' folder and https://www.wanikani.com are the property of Tofugu LLC.
+All the artistic content located in the 'img/bunpro' folder and https://bunpro.jp are the property of Tofugu LLC.
 
 Thanks to Bunpro staff for their amazing work!

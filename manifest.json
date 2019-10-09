@@ -5,11 +5,11 @@
   "description": "Your favorite Japanese learning app at a click away.",
   "browser_action": {
     "default_title": "Bunpro Companion",
-    "default_icon": "/img/wanikani/icon.png",
+    "default_icon": "/img/bunpro/icon.png",
     "default_popup": "/html/home.html"
   },
   "icons": {
-    "128": "/img/wanikani/icon.png"
+    "128": "/img/bunpro/icon.png"
   },
   "permissions": [
     "*://*.wanikani.com/",
@@ -20,7 +20,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["*://www.wanikani.com/*"],
+      "matches": ["*://bunpro.jp/*"],
       "js": [
         "/js/web-content.js"
       ],

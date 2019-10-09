@@ -159,7 +159,7 @@ function requestUserData(notify, callback) {
 function createNotification(body, url, tag){
 
   var notification = new Notification('Bunpro Companion', {
-    icon: '/img/wanikani/icon.png',
+    icon: '/img/bunpro/icon.png',
     body: body,
     tag: tag
   });
