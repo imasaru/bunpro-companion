@@ -41,7 +41,7 @@ window.onload = function() {
     // a new key has been entered: save
     } else if (key != bpUserData.userPublicKey){
 
-      getApiData(key, "user-information", function(obj){
+      getApiData(key, "user_information", function(obj){
 
         // the key is not valid
         if (obj.user_information === undefined){

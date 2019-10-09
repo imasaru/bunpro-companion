@@ -69,12 +69,12 @@ function updateBpUserData(jsonUserData, type, callback){
   bpUserData.level = jsonUserData.user_information.level;
   bpUserData.title = jsonUserData.user_information.title;
 
-  if (type == "study-queue") {
+  if (type == "study_queue") {
     bpUserData.nbLessons = jsonUserData.requested_information.lessons_available;
     bpUserData.nbReviews = jsonUserData.requested_information.reviews_available;
     bpUserData.nextReview = parseRemainingTime(jsonUserData.requested_information.next_review_date);
 
-  } else if (type == "srs-distribution") {
+  } else if (type == "srs_distribution") {
     bpUserData.srsNbApprentice = jsonUserData.requested_information.apprentice.total;
     bpUserData.srsNbGuru = jsonUserData.requested_information.guru.total;
     bpUserData.srsNbMaster = jsonUserData.requested_information.master.total;
@@ -96,7 +96,7 @@ function requestUserData(notify, callback) {
   if (currentData.userPublicKey != "") {
 
     // get lessons and reviews data
-    getApiData(currentData.userPublicKey, "study-queue", function(userData){
+    getApiData(currentData.userPublicKey, "study_queue", function(userData){
 
       var nbReviews = userData.requested_information.reviews_available;
       var nbLessons = userData.requested_information.lessons_available;
@@ -143,11 +143,11 @@ function requestUserData(notify, callback) {
       }
       chrome.browserAction.setTitle({title: "Bunpro Companion\n" + "Lesson(s): " + nbLessons + "\n" + "Review(s): " + nbReviews});
       // save study data
-      updateBpUserData(userData, "study-queue", function(){
+      updateBpUserData(userData, "study_queue", function(){
         // get the srs distribution data
-        getApiData(currentData.userPublicKey, "srs-distribution" ,function(userData){
+        getApiData(currentData.userPublicKey, "srs_distribution" ,function(userData){
           // save srs distribution data
-          updateBpUserData(userData, "srs-distribution", function(){ if (callback) callback(); });
+          updateBpUserData(userData, "srs_distribution", function(){ if (callback) callback(); });
         });
       });
 
