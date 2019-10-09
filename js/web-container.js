@@ -1,4 +1,4 @@
 window.onload = function() {
   // load the Bunpro page iframe
-  document.getElementById('wanikaniFrame').src = localStorage.toLink;
+  document.getElementById('bunproFrame').src = localStorage.toLink;
 }

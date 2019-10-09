@@ -12,7 +12,7 @@
     "128": "/img/bunpro/icon.png"
   },
   "permissions": [
-    "*://*.wanikani.com/",
+    "*://*.bunpro.jp/",
     "notifications",
     "storage",
     "webRequest",
