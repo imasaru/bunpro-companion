@@ -109,10 +109,10 @@ function requestUserData(notify, callback) {
           if (nbReviews > 0 && nbReviews != currentData.nbReviews) {
             if (nbReviews === 1) {
             // special case of a single review
-              createNotification("You have " + nbReviews + " " + reviewTxt + " available.", "https://www.wanikani.com/review", "reviews");
+              createNotification("You have " + nbReviews + " " + reviewTxt + " available.", "https://bunpro.jp/study", "reviews");
               notified = true;
             } else {
-              createNotification("You have " + nbReviews + " "+ reviewTxt + " available.", "https://www.wanikani.com/review", "reviews");
+              createNotification("You have " + nbReviews + " "+ reviewTxt + " available.", "https://bunpro.jp/study", "reviews");
               notified = true;
             }
           }
@@ -120,10 +120,10 @@ function requestUserData(notify, callback) {
           if (nbLessons > 0 && nbLessons != currentData.nbLessons) {
           // special case of a single lesson
             if (currentData.nbLessons === 1) {
-              createNotification("You have " + nbLessons + " " + lessonTxt + " available.", "https://www.wanikani.com/lesson", "lessons");
+              createNotification("You have " + nbLessons + " " + lessonTxt + " available.", "https://bunpro.jp/lessons", "lessons");
               notified = true;
             } else {
-              createNotification("You have " + nbLessons + " " + lessonTxt + " available.", "https://www.wanikani.com/lesson", "lessons");
+              createNotification("You have " + nbLessons + " " + lessonTxt + " available.", "https://bunpro.jp/lessons", "lessons");
               notified = true;
             }
           }

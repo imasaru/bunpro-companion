@@ -16,7 +16,7 @@ window.onload = function() {
 
     // action when username is clicked
     document.getElementById('h.username').onclick = function() {
-        window.open('https://www.wanikani.com/users/' + bpUserData.username)
+        window.open('https://bunpro.jp/users/' + bpUserData.username)
     }
 
     // display Gravatar image (if exist)
@@ -33,13 +33,13 @@ window.onload = function() {
 
     // action when level is clicked
     document.getElementById('h.level').onclick = function() {
-        window.open('https://www.wanikani.com/level/' + bpUserData.level)
+        window.open('https://bunpro.jp/user/profile/stats')
     }
 
   // when the user click on a link, it redirect the url to the web-container page or a new Chrome tab (depends on user settings)
   var inApp = bpUserData.inAppNavigation;
   document.getElementById('toLessons').onclick = function() {
-    var url = "https://www.wanikani.com/lesson/session"
+    var url = "https://bunpro.jp/learn"
     if (inApp){
       localStorage.toLink = url;
     } else {
@@ -47,7 +47,7 @@ window.onload = function() {
     }
   }
   document.getElementById('toReviews').onclick = function() {
-    var url = "https://www.wanikani.com/review/session";
+    var url = "https://bunpro.jp/study";
     if (inApp){
      localStorage.toLink = url;
     } else {
@@ -55,7 +55,7 @@ window.onload = function() {
     }
   }
   document.getElementById('toDashboard').onclick = function() {
-     var url = "https://www.wanikani.com/login";
+     var url = "https://bunpro.jp/login";
      if (inApp){
        localStorage.toLink = url;
      } else {

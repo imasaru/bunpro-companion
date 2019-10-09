@@ -13,7 +13,7 @@ window.onload = function() {
 
   // action when LINK to Bunpro is clicked
   document.getElementById('link').onclick = function() {
-    window.open('https://www.wanikani.com/settings/personal_access_tokens#public-api-key')
+    window.open('https://bunpro.jp/users/edit.' + bpUserData.username)
   }
 
   // action when settings are saved
