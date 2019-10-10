@@ -13,11 +13,11 @@ function BpUserData(){
   this.level = "42";
   this.title = "Legend";
   this.nbReviews = 0;
-  this.srsNbApprentice = 0;
-  this.srsNbGuru = 0;
-  this.srsNbMaster = 0;
-  this.srsNbEnlighten = 0;
-  this.srsNbBurned = 0;
+// this.srsNbApprentice = 0;
+// this.srsNbGuru = 0;
+// this.srsNbMaster = 0;
+// this.srsNbEnlighten = 0;
+// this.srsNbBurned = 0;
 }
 
 // save the local user data
@@ -72,13 +72,14 @@ function updateBpUserData(jsonUserData, type, callback){
     bpUserData.nbReviews = jsonUserData.requested_information.reviews_available;
     bpUserData.nextReview = parseRemainingTime(jsonUserData.requested_information.next_review_date);
 
-  } else if (type == "srs_distribution") {
-    bpUserData.srsNbApprentice = jsonUserData.requested_information.apprentice.total;
-    bpUserData.srsNbGuru = jsonUserData.requested_information.guru.total;
-    bpUserData.srsNbMaster = jsonUserData.requested_information.master.total;
-    bpUserData.srsNbEnlighten = jsonUserData.requested_information.enlighten.total;
-    bpUserData.srsNbBurned = jsonUserData.requested_information.burned.total;
   }
+  //   else if (type == "srs_distribution") {
+  //   bpUserData.srsNbApprentice = jsonUserData.requested_information.apprentice.total;
+  //   bpUserData.srsNbGuru = jsonUserData.requested_information.guru.total;
+  //   bpUserData.srsNbMaster = jsonUserData.requested_information.master.total;
+  //   bpUserData.srsNbEnlighten = jsonUserData.requested_information.enlighten.total;
+  //   bpUserData.srsNbBurned = jsonUserData.requested_information.burned.total;
+  // }
 
   setBpUserData(bpUserData);
 
@@ -93,7 +94,7 @@ function requestUserData(notify, callback) {
   // update data and display notifications
   if (currentData.userPublicKey != "") {
 
-    // get lessons and reviews data
+    // get reviews data
     getApiData(currentData.userPublicKey, "study_queue", function(userData){
 
       var nbReviews = userData.requested_information.reviews_available;
@@ -129,11 +130,11 @@ function requestUserData(notify, callback) {
       chrome.browserAction.setTitle({title: "Bunpro Companion" + "\n" + "Review(s): " + nbReviews});
       // save study data
       updateBpUserData(userData, "study_queue", function(){
-        // get the srs distribution data
-        getApiData(currentData.userPublicKey, "srs_distribution" ,function(userData){
-          // save srs distribution data
-          updateBpUserData(userData, "srs_distribution", function(){ if (callback) callback(); });
-        });
+        // // get the srs distribution data
+        // getApiData(currentData.userPublicKey, "srs_distribution" ,function(userData){
+        //   // save srs distribution data
+        //   updateBpUserData(userData, "srs_distribution", function(){ if (callback) callback(); });
+        // });
       });
 
     });
