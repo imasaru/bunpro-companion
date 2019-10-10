@@ -12,7 +12,6 @@ function BpUserData(){
   this.gravatar = "";
   this.level = "42";
   this.title = "Legend";
-  this.nbLessons = 0;
   this.nbReviews = 0;
   this.srsNbApprentice = 0;
   this.srsNbGuru = 0;
@@ -70,7 +69,6 @@ function updateBpUserData(jsonUserData, type, callback){
   bpUserData.title = jsonUserData.user_information.title;
 
   if (type == "study_queue") {
-    bpUserData.nbLessons = jsonUserData.requested_information.lessons_available;
     bpUserData.nbReviews = jsonUserData.requested_information.reviews_available;
     bpUserData.nextReview = parseRemainingTime(jsonUserData.requested_information.next_review_date);
 
@@ -99,13 +97,11 @@ function requestUserData(notify, callback) {
     getApiData(currentData.userPublicKey, "study_queue", function(userData){
 
       var nbReviews = userData.requested_information.reviews_available;
-      var nbLessons = userData.requested_information.lessons_available;
 
       // display desktop notifications
       if (notify === true && currentData.refreshInterval != 0) {
           var notified = false;
           var reviewTxt = (nbReviews > 1) ? "reviews" : "review";
-          var lessonTxt = (nbLessons > 1) ? "lessons" : "lessons";
           if (nbReviews > 0 && nbReviews != currentData.nbReviews) {
             if (nbReviews === 1) {
             // special case of a single review
@@ -113,17 +109,6 @@ function requestUserData(notify, callback) {
               notified = true;
             } else {
               createNotification("You have " + nbReviews + " "+ reviewTxt + " available.", "https://bunpro.jp/study", "reviews");
-              notified = true;
-            }
-          }
-          //if (nbLessons > 0 && nbLessons != currentData.nbLessons) {
-          if (nbLessons > 0 && nbLessons != currentData.nbLessons) {
-          // special case of a single lesson
-            if (currentData.nbLessons === 1) {
-              createNotification("You have " + nbLessons + " " + lessonTxt + " available.", "https://bunpro.jp/lessons", "lessons");
-              notified = true;
-            } else {
-              createNotification("You have " + nbLessons + " " + lessonTxt + " available.", "https://bunpro.jp/lessons", "lessons");
               notified = true;
             }
           }
@@ -135,13 +120,13 @@ function requestUserData(notify, callback) {
       }
 
       // update badge text and title
-      var total = nbReviews+nbLessons;
+      var total = nbReviews;
       if (total == 0 && currentData.hide0Badge) {
         chrome.browserAction.setBadgeText({text:""});
       } else {
         chrome.browserAction.setBadgeText({text:total.toString()});
       }
-      chrome.browserAction.setTitle({title: "Bunpro Companion\n" + "Lesson(s): " + nbLessons + "\n" + "Review(s): " + nbReviews});
+      chrome.browserAction.setTitle({title: "Bunpro Companion" + "\n" + "Review(s): " + nbReviews});
       // save study data
       updateBpUserData(userData, "study_queue", function(){
         // get the srs distribution data

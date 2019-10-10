@@ -69,7 +69,6 @@ window.onload = function() {
      document.getElementById('username').innerHTML = bpUserData.username;
      document.getElementById('level').innerHTML = bpUserData.level;
      document.getElementById('title').innerHTML = bpUserData.title;
-     document.getElementById('nbLessons').innerHTML = bpUserData.nbLessons;
      document.getElementById('nbReviews').innerHTML = bpUserData.nbReviews;
      document.getElementById('reviewTime').innerHTML = bpUserData.nextReview;
      document.getElementById('srsNbApprentice').innerHTML = bpUserData.srsNbApprentice;
