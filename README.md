@@ -5,11 +5,12 @@
 </div>
 
 <p align="center">
-<a href="https://chrome.google.com/webstore/detail/wanikani-companion/plfjbbakjphlkdpcdpodaedhicoaloph"><img title="Chrome Web Store URL" src="https://img.shields.io/chrome-web-store/v/plfjbbakjphlkdpcdpodaedhicoaloph.svg?style=flat-square" /></a>
 <a href="LICENSE"><img title="License" src="https://img.shields.io/github/license/naei/wanikani-companion.svg?style=flat-square" /></a>
 </p>
 
-<p align="center"><img src="https://lh6.googleusercontent.com/XPRgWP5wxDrRvQgA_tL2vI4QBTnyegM5tcAvzZaEzPuYb57-2-BtqTFyhoY0u8PUjpa5HTcLxA=s640-h400-e365-rw" /></p>
+<p align="center">
+<a href="image"><img title="image" src="https://raw.githubusercontent.com/imasaru/bunpro-companion/master/image.png" /></a>
+</p>
 
 ## Features
 
