@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-<a href="image"><img title="image" src="https://raw.githubusercontent.com/imasaru/bunpro-companion/master/image.png" /></a>
+<a href="image.png"><img title="image" src="https://raw.githubusercontent.com/imasaru/bunpro-companion/master/image.png" /></a>
 </p>
 
 ## Features
