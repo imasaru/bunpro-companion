@@ -42,7 +42,7 @@ For more details about Chrome extensions, Bunpro and development for Bunpro, I s
 
 ## Notice
 
-Copyright (c) 2015 Lucas Pantanella
+Copyright (c) 2015 Lucas Pantanella; modified for Bunpro by imasaru
 
 The sources are released under the terms of the [MIT license](LICENSE).
 
